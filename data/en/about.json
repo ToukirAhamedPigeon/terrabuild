@@ -1,0 +1,21 @@
+{
+  "about": {
+    "title": "About Terrabuild",
+    "description": "Terrabuild is a leading real estate company dedicated to providing exceptional property solutions in Bangladesh. With years of experience in the industry, we have helped thousands of clients find their perfect homes and investment properties.",
+    "mission": "Our mission is to transform the real estate experience through innovation, transparency, and excellence. We strive to make property buying, selling, and renting a seamless and enjoyable experience for everyone.",
+    "vision": "To become the most trusted real estate brand in Bangladesh, known for integrity, expertise, and customer satisfaction.",
+    "values": [
+      "Integrity and Transparency",
+      "Customer First Approach",
+      "Innovation and Excellence",
+      "Professionalism",
+      "Community Building"
+    ],
+    "stats": {
+      "propertiesSold": 1250,
+      "happyClients": 3850,
+      "yearsExperience": 15,
+      "teamMembers": 45
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "মোঃ রহমান",
+      "role": "সিইও ও প্রতিষ্ঠাতা",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "bio": "রিয়েল এস্টেট শিল্পে ২০+ বছরের অভিজ্ঞতা। টেরাবিল্ডের সাফল্যের পিছনে দূরদর্শী নেতা।",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 2,
+      "name": "সাদিয়া খান",
+      "role": "সেলস প্রধান",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg",
+      "bio": "লাক্সারি সম্পত্তি বিক্রয়ের বিশেষজ্ঞ যার ক্লায়েন্ট প্রত্যাশা অতিক্রম করার প্রমাণিত ট্র্যাক রেকর্ড রয়েছে।",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 3,
+      "name": "কামাল হোসেন",
+      "role": "সিনিয়র এজেন্ট",
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "bio": "বাণিজ্যিক সম্পত্তিতে বিশেষজ্ঞ এবং ঢাকার ব্যবসায়িক জেলাগুলির গভীর জ্ঞান রয়েছে।",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 4,
+      "name": "ফারাহ আহমেদ",
+      "role": "আইনি উপদেষ্টা",
+      "image": "https://randomuser.me/api/portraits/women/4.jpg",
+      "bio": "রিয়েল এস্টেট আইন বিশেষজ্ঞ যিনি নিশ্চিত করেন যে সমস্ত লেনদেন আইনত সঠিক এবং সঙ্গতিপূর্ণ।",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 5,
+      "name": "রফিকুল ইসলাম",
+      "role": "সম্পত্তি পরামর্শক",
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "bio": "সম্পত্তি মূল্যায়ন এবং বিনিয়োগ উপদেষ্টার বিশেষজ্ঞ যার ডেটা-চালিত পদ্ধতি রয়েছে।",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 6,
+      "name": "তাহমিনা বেগম",
+      "role": "মার্কেটিং ম্যানেজার",
+      "image": "https://randomuser.me/api/portraits/women/6.jpg",
+      "bio": "রিয়েল এস্টেট ব্র্যান্ড উন্নয়নে বিশেষজ্ঞ সৃজনশীল মার্কেটিং কৌশলবিদ।",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    }
+  ]
+}

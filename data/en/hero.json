@@ -1,0 +1,9 @@
+{
+  "hero": {
+    "title": "Find Your Dream Property",
+    "subtitle": "Discover luxury homes, premium apartments, and commercial spaces in prime locations across Bangladesh",
+    "backgroundImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&h=1080&fit=crop",
+    "searchPlaceholder": "Search by city, neighborhood, address, or ZIP code",
+    "ctaButton": "Explore Properties"
+  }
+}

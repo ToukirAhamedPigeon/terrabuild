@@ -1,0 +1,52 @@
+{
+  "partners": [
+    {
+      "id": 1,
+      "name": "Dutch-Bangla Bank",
+      "logo": "https://via.placeholder.com/150x80?text=DBBL",
+      "website": "https://www.dutchbanglabank.com"
+    },
+    {
+      "id": 2,
+      "name": "bKash",
+      "logo": "https://via.placeholder.com/150x80?text=bKash",
+      "website": "https://www.bkash.com"
+    },
+    {
+      "id": 3,
+      "name": "Grameenphone",
+      "logo": "https://via.placeholder.com/150x80?text=GP",
+      "website": "https://www.grameenphone.com"
+    },
+    {
+      "id": 4,
+      "name": "Robi",
+      "logo": "https://via.placeholder.com/150x80?text=Robi",
+      "website": "https://www.robi.com.bd"
+    },
+    {
+      "id": 5,
+      "name": "Pran",
+      "logo": "https://via.placeholder.com/150x80?text=Pran",
+      "website": "https://www.prangroup.com"
+    },
+    {
+      "id": 6,
+      "name": "Bashundhara Group",
+      "logo": "https://via.placeholder.com/150x80?text=Bashundhara",
+      "website": "https://www.bashundharagroup.com"
+    },
+    {
+      "id": 7,
+      "name": "City Bank",
+      "logo": "https://via.placeholder.com/150x80?text=City+Bank",
+      "website": "https://www.thecitybank.com"
+    },
+    {
+      "id": 8,
+      "name": "Navana Group",
+      "logo": "https://via.placeholder.com/150x80?text=Navana",
+      "website": "https://www.navanagroup.com"
+    }
+  ]
+}

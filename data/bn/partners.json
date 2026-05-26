@@ -1,0 +1,52 @@
+{
+  "partners": [
+    {
+      "id": 1,
+      "name": "ডাচ-বাংলা ব্যাংক",
+      "logo": "https://via.placeholder.com/150x80?text=DBBL",
+      "website": "https://www.dutchbanglabank.com"
+    },
+    {
+      "id": 2,
+      "name": "বিকাশ",
+      "logo": "https://via.placeholder.com/150x80?text=bKash",
+      "website": "https://www.bkash.com"
+    },
+    {
+      "id": 3,
+      "name": "গ্রামীণফোন",
+      "logo": "https://via.placeholder.com/150x80?text=GP",
+      "website": "https://www.grameenphone.com"
+    },
+    {
+      "id": 4,
+      "name": "রবি",
+      "logo": "https://via.placeholder.com/150x80?text=Robi",
+      "website": "https://www.robi.com.bd"
+    },
+    {
+      "id": 5,
+      "name": "প্রাণ",
+      "logo": "https://via.placeholder.com/150x80?text=Pran",
+      "website": "https://www.prangroup.com"
+    },
+    {
+      "id": 6,
+      "name": "বাশুন্ধরা গ্রুপ",
+      "logo": "https://via.placeholder.com/150x80?text=Bashundhara",
+      "website": "https://www.bashundharagroup.com"
+    },
+    {
+      "id": 7,
+      "name": "সিটি ব্যাংক",
+      "logo": "https://via.placeholder.com/150x80?text=City+Bank",
+      "website": "https://www.thecitybank.com"
+    },
+    {
+      "id": 8,
+      "name": "নাভানা গ্রুপ",
+      "logo": "https://via.placeholder.com/150x80?text=Navana",
+      "website": "https://www.navanagroup.com"
+    }
+  ]
+}

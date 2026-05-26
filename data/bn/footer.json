@@ -1,0 +1,20 @@
+{
+  "footer": {
+    "companyName": "টেরাবিল্ড",
+    "tagline": "আপনার বিশ্বস্ত হাত রিয়েল এস্টেটে",
+    "description": "টেরাবিল্ড রিয়েল এস্টেটে আপনার বিশ্বস্ত সঙ্গী। আমরা আপনাকে আপনার জীবনধারা এবং বিনিয়োগ লক্ষ্যের সাথে মেলে এমন নিখুঁত সম্পত্তি খুঁজে পেতে সহায়তা করি। আমাদের দক্ষতা এবং নিষ্ঠার সাথে, আমরা রিয়েল এস্টেট লেনদেন মসৃণ এবং সফল করি।",
+    "contact": {
+      "address": "সাউথ বনশ্রী, ঢাকা, বাংলাদেশ",
+      "phone": "+৮৮০ ১২৩৪ ৫৬৭৮৯০",
+      "email": "info@terrabuild.com",
+      "hours": "রবিবার - বৃহস্পতিব: সকাল ৯:০০ - সন্ধ্যা ৬:০০"
+    },
+    "socialLinks": {
+      "facebook": "https://facebook.com/terrabuild",
+      "twitter": "https://twitter.com/terrabuild",
+      "linkedin": "https://linkedin.com/company/terrabuild",
+      "instagram": "https://instagram.com/terrabuild",
+      "youtube": "https://youtube.com/terrabuild"
+    }
+  }
+}

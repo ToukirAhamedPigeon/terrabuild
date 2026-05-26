@@ -1,0 +1,49 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Dr. Shahidul Islam",
+      "role": "Homeowner",
+      "image": "https://randomuser.me/api/portraits/men/11.jpg",
+      "text": "Terrabuild helped me find my dream home in Banani. Their team was professional, responsive, and made the entire process seamless. I couldn't be happier with my purchase.",
+      "rating": 5,
+      "date": "2024-03-15"
+    },
+    {
+      "id": 2,
+      "name": "Nusrat Jahan",
+      "role": "Investor",
+      "image": "https://randomuser.me/api/portraits/women/12.jpg",
+      "text": "Excellent service from start to finish. Found a great investment property with amazing returns. The team's market knowledge is outstanding. Highly recommended!",
+      "rating": 5,
+      "date": "2024-02-10"
+    },
+    {
+      "id": 3,
+      "name": "Rashed Karim",
+      "role": "Business Owner",
+      "image": "https://randomuser.me/api/portraits/men/13.jpg",
+      "text": "The team at Terrabuild is top-notch. They found the perfect commercial space for my business in Uttara. The negotiation and documentation process was handled professionally.",
+      "rating": 4,
+      "date": "2024-01-20"
+    },
+    {
+      "id": 4,
+      "name": "Fatema Akter",
+      "role": "First-time Buyer",
+      "image": "https://randomuser.me/api/portraits/women/14.jpg",
+      "text": "As a first-time home buyer, I was nervous. But Terrabuild guided me every step of the way. They answered all my questions and helped me make informed decisions. Thank you!",
+      "rating": 5,
+      "date": "2024-03-01"
+    },
+    {
+      "id": 5,
+      "name": "Hasan Miah",
+      "role": "Property Owner",
+      "image": "https://randomuser.me/api/portraits/men/15.jpg",
+      "text": "Sold my property through Terrabuild and got a great price. Their marketing strategy and buyer network are impressive. Highly professional team.",
+      "rating": 5,
+      "date": "2024-02-25"
+    }
+  ]
+}

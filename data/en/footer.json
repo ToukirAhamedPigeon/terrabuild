@@ -1,0 +1,20 @@
+{
+  "footer": {
+    "companyName": "Terrabuild",
+    "tagline": "Your Trusted Hands in Real Estate",
+    "description": "Terrabuild is your trusted partner in real estate. We help you find the perfect property that matches your lifestyle and investment goals. With our expertise and dedication, we make real estate transactions smooth and successful.",
+    "contact": {
+      "address": "South Banasree, Dhaka, Bangladesh",
+      "phone": "+880 1234 567890",
+      "email": "info@terrabuild.com",
+      "hours": "Sunday - Thursday: 9:00 AM - 6:00 PM"
+    },
+    "socialLinks": {
+      "facebook": "https://facebook.com/terrabuild",
+      "twitter": "https://twitter.com/terrabuild",
+      "linkedin": "https://linkedin.com/company/terrabuild",
+      "instagram": "https://instagram.com/terrabuild",
+      "youtube": "https://youtube.com/terrabuild"
+    }
+  }
+}

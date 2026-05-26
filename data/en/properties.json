@@ -1,0 +1,82 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Luxury Villa with Pool",
+      "price": 12500000,
+      "beds": 4,
+      "baths": 4,
+      "sqft": 3200,
+      "location": "Banani, Dhaka",
+      "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&h=400&fit=crop",
+      "type": "buy",
+      "featured": true,
+      "description": "Stunning luxury villa with private pool, modern architecture, and premium finishes. Located in the heart of Banani with easy access to schools, hospitals, and shopping malls."
+    },
+    {
+      "id": 2,
+      "title": "Modern Apartment",
+      "price": 8500000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1850,
+      "location": "Gulshan, Dhaka",
+      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&h=400&fit=crop",
+      "type": "rent",
+      "featured": true,
+      "description": "Contemporary apartment with breathtaking city views, premium amenities including swimming pool, gym, and 24/7 security. Prime location in Gulshan."
+    },
+    {
+      "id": 3,
+      "title": "Corporate Office Space",
+      "price": 45000000,
+      "beds": 0,
+      "baths": 4,
+      "sqft": 5000,
+      "location": "Uttara, Dhaka",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop",
+      "type": "sell",
+      "featured": true,
+      "description": "Premium corporate office space in a prime business district. Modern facilities, high-speed elevators, parking spaces, and excellent connectivity to all parts of the city."
+    },
+    {
+      "id": 4,
+      "title": "Penthouse Suite",
+      "price": 22000000,
+      "beds": 5,
+      "baths": 5,
+      "sqft": 4200,
+      "location": "Baridhara, Dhaka",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop",
+      "type": "buy",
+      "featured": true,
+      "description": "Exclusive penthouse with panoramic city views, private terrace garden, luxury finishes throughout, and dedicated elevator access. Located in the prestigious Baridhara area."
+    },
+    {
+      "id": 5,
+      "title": "Commercial Retail Space",
+      "price": 35000000,
+      "beds": 0,
+      "baths": 3,
+      "sqft": 2800,
+      "location": "Dhanmondi, Dhaka",
+      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop",
+      "type": "rent",
+      "featured": true,
+      "description": "Prime retail space in a high-traffic commercial area. Perfect for restaurants, boutiques, showrooms, or corporate offices. Modern facilities and ample parking."
+    },
+    {
+      "id": 6,
+      "title": "Luxury Duplex",
+      "price": 18000000,
+      "beds": 4,
+      "baths": 4,
+      "sqft": 3500,
+      "location": "Gulshan, Dhaka",
+      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop",
+      "type": "buy",
+      "featured": true,
+      "description": "Elegant duplex apartment with high-end finishes, private elevator, stunning views, and premium amenities. Features include marble flooring, imported fixtures, and smart home technology."
+    }
+  ]
+}

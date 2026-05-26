@@ -1,0 +1,82 @@
+{
+  "team": [
+    {
+      "id": 1,
+      "name": "Md. Rahman",
+      "role": "CEO & Founder",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "bio": "20+ years of experience in real estate industry. Visionary leader behind Terrabuild's success.",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Sadia Khan",
+      "role": "Head of Sales",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg",
+      "bio": "Expert in luxury property sales with proven track record of exceeding client expectations.",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Kamal Hossain",
+      "role": "Senior Agent",
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "bio": "Specialized in commercial properties with deep knowledge of Dhaka's business districts.",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Farah Ahmed",
+      "role": "Legal Advisor",
+      "image": "https://randomuser.me/api/portraits/women/4.jpg",
+      "bio": "Real estate law expert ensuring all transactions are legally sound and compliant.",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Rafiqul Islam",
+      "role": "Property Consultant",
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "bio": "Expert in property valuation and investment advisory with data-driven approach.",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Tahmina Begum",
+      "role": "Marketing Manager",
+      "image": "https://randomuser.me/api/portraits/women/6.jpg",
+      "bio": "Creative marketing strategist specializing in real estate brand development.",
+      "social": {
+        "facebook": "https://facebook.com",
+        "twitter": "https://twitter.com",
+        "linkedin": "https://linkedin.com",
+        "instagram": "https://instagram.com"
+      }
+    }
+  ]
+}

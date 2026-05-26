@@ -1,0 +1,46 @@
+{
+  "services": [
+    {
+      "id": 1,
+      "title": "Buy Property",
+      "icon": "Home",
+      "description": "Find your dream home with our extensive property listings and expert guidance throughout the buying process.",
+      "features": ["Property Search", "Price Negotiation", "Legal Assistance", "Documentation Support"]
+    },
+    {
+      "id": 2,
+      "title": "Rent Property",
+      "icon": "Building2",
+      "description": "Flexible rental options for residential and commercial spaces with transparent agreements and fair pricing.",
+      "features": ["Rental Listings", "Tenant Screening", "Lease Agreements", "Property Management"]
+    },
+    {
+      "id": 3,
+      "title": "Sell Property",
+      "icon": "Handshake",
+      "description": "Get the best value for your property with professional valuation, marketing, and negotiation services.",
+      "features": ["Property Valuation", "Marketing Strategy", "Buyer Matching", "Closing Support"]
+    },
+    {
+      "id": 4,
+      "title": "Legal Support",
+      "icon": "Scale",
+      "description": "Professional legal support for all real estate transactions including documentation and registration.",
+      "features": ["Document Verification", "Contract Review", "Registration", "Dispute Resolution"]
+    },
+    {
+      "id": 5,
+      "title": "Logistic Support",
+      "icon": "Truck",
+      "description": "Seamless logistics and relocation assistance for hassle-free moving to your new property.",
+      "features": ["Moving Services", "Storage Solutions", "Packing Support", "Transportation"]
+    },
+    {
+      "id": 6,
+      "title": "Free Consultation",
+      "icon": "PhoneCall",
+      "description": "Free consultation with our real estate experts to guide you through your property journey.",
+      "features": ["Expert Advice", "Market Analysis", "Investment Planning", "Custom Solutions"]
+    }
+  ]
+}
