@@ -6,13 +6,12 @@ import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Play, Pause, Volume2, VolumeX } from "lucide-react";
+import { Play, Pause, Volume2, VolumeX, Film, Image as ImageIcon } from "lucide-react";
 
 const slides = [
   {
     type: "video",
     src: "/assets/videos/slide_video.mp4",
-    poster: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&h=1080&fit=crop", // Poster image shown while video loads
     title: "Luxury Living Redefined",
     location: "Banani, Dhaka",
     description: "Experience unparalleled luxury in this stunning property",
@@ -45,23 +44,32 @@ const HeroCarousel = () => {
   const [isMuted, setIsMuted] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const [videoProgress, setVideoProgress] = useState(0);
-  const [isBuffering, setIsBuffering] = useState(false);
+  const [videoFullyLoaded, setVideoFullyLoaded] = useState(false);
   const swiperRef = useRef<SwiperType | null>(null);
   const videoRef = useRef<HTMLVideoElement | null>(null);
+  const preloadVideoRef = useRef<HTMLVideoElement | null>(null);
 
-  // Preload video when page loads
+  // Preload full video in background
   useEffect(() => {
     const preloadVideo = document.createElement("video");
     preloadVideo.preload = "auto";
     preloadVideo.src = slides[0].src;
+    preloadVideo.muted = true;
+    preloadVideoRef.current = preloadVideo;
+    
+    // Wait for video to be fully loaded
+    preloadVideo.addEventListener("canplaythrough", () => {
+      setVideoFullyLoaded(true);
+      console.log("Video fully loaded in background");
+    });
+    
     preloadVideo.load();
   }, []);
 
   // Handle video playback when slide changes
   useEffect(() => {
     const currentSlide = slides[currentIndex];
-    if (currentSlide.type === "video" && videoRef.current) {
+    if (currentSlide.type === "video" && videoRef.current && videoFullyLoaded) {
       if (isPlaying) {
         const playPromise = videoRef.current.play();
         if (playPromise !== undefined) {
@@ -73,7 +81,7 @@ const HeroCarousel = () => {
         videoRef.current.pause();
       }
     }
-  }, [currentIndex, isPlaying]);
+  }, [currentIndex, isPlaying, videoFullyLoaded]);
 
   // Handle video mute/unmute
   useEffect(() => {
@@ -109,52 +117,23 @@ const HeroCarousel = () => {
     }
   }, [currentIndex]);
 
-  // Track video progress for buffering indicator
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video && currentIndex === 0) {
-      const handleProgress = () => {
-        if (video.buffered.length > 0) {
-          const bufferedEnd = video.buffered.end(video.buffered.length - 1);
-          const duration = video.duration;
-          const progress = (bufferedEnd / duration) * 100;
-          setVideoProgress(progress);
-          
-          // Show buffering indicator if not enough data
-          setIsBuffering(video.readyState < 3);
-        }
-      };
-      
-      const handleCanPlay = () => {
-        setIsBuffering(false);
-        setVideoLoaded(true);
-      };
-      
-      video.addEventListener("progress", handleProgress);
-      video.addEventListener("canplay", handleCanPlay);
-      video.addEventListener("waiting", () => setIsBuffering(true));
-      video.addEventListener("playing", () => setIsBuffering(false));
-      
-      return () => {
-        video.removeEventListener("progress", handleProgress);
-        video.removeEventListener("canplay", handleCanPlay);
-        video.removeEventListener("waiting", () => setIsBuffering(true));
-        video.removeEventListener("playing", () => setIsBuffering(false));
-      };
-    }
-  }, [currentIndex]);
-
   const handleSlideChange = (swiper: SwiperType) => {
     setCurrentIndex(swiper.activeIndex);
     setVideoLoaded(false);
-    setVideoProgress(0);
   };
 
   const handleSwiperInit = (swiper: SwiperType) => {
     swiperRef.current = swiper;
+    // Start with first slide (image), not the video
+    if (swiper && slides[0].type === "video") {
+      swiper.slideTo(1, 0); // Skip to first image slide immediately
+    }
   };
 
   const togglePlayPause = () => {
+    console.log("Toggle play/pause called, current state:", isPlaying);
+    console.log("Video ref:", videoRef.current);
+    
     if (videoRef.current) {
       if (isPlaying) {
         videoRef.current.pause();
@@ -169,6 +148,8 @@ const HeroCarousel = () => {
           });
         }
       }
+    } else {
+      console.log("Video ref is null");
     }
   };
 
@@ -187,25 +168,34 @@ const HeroCarousel = () => {
 
   const handleVideoCanPlay = () => {
     setVideoLoaded(true);
-    setIsBuffering(false);
-    if (isPlaying && videoRef.current) {
+    if (isPlaying && videoRef.current && videoFullyLoaded) {
       videoRef.current.play().catch(() => {});
     }
   };
 
   const handleVideoRef = (element: HTMLVideoElement | null) => {
-    videoRef.current = element;
+    if (element && videoFullyLoaded) {
+      videoRef.current = element;
+      // Copy the loaded data from preload video to the actual video element
+      if (preloadVideoRef.current && preloadVideoRef.current.readyState >= 3) {
+        element.src = slides[0].src;
+        element.load();
+        element.play().catch(() => {});
+      }
+    } else if (element) {
+      videoRef.current = element;
+    }
   };
 
   // Restart video when coming back to video slide
   useEffect(() => {
-    if (currentIndex === 0 && videoRef.current) {
+    if (currentIndex === 0 && videoRef.current && videoFullyLoaded) {
       videoRef.current.currentTime = 0;
       if (isPlaying) {
         videoRef.current.play().catch(() => {});
       }
     }
-  }, [currentIndex]);
+  }, [currentIndex, videoFullyLoaded]);
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
@@ -242,47 +232,20 @@ const HeroCarousel = () => {
                 />
               ) : (
                 <>
-                  {/* Poster Image - Shown while video loads */}
-                  {!videoLoaded && slide.poster && (
-                    <div className="absolute inset-0 z-0">
-                      <Image
-                        src={slide.poster}
-                        alt={slide.title}
-                        fill
-                        className="object-cover"
-                        priority
-                      />
-                      <div className="absolute inset-0 bg-black/30" />
-                    </div>
-                  )}
-                  
-                  {/* Video Element */}
                   <video
                     ref={index === 0 ? handleVideoRef : null}
                     src={slide.src}
-                    poster={slide.poster}
-                    autoPlay={index === 0}
+                    autoPlay={false}
                     muted={isMuted}
                     playsInline
-                    preload="auto"
                     className="w-full h-full object-cover cursor-pointer"
                     onCanPlay={index === 0 ? handleVideoCanPlay : undefined}
                   />
-                  
-                  {/* Loading Indicator with Progress Bar */}
-                  {(!videoLoaded || isBuffering) && index === 0 && (
-                    <div className="absolute inset-0 bg-black/60 flex items-center justify-center z-20">
-                      <div className="text-center max-w-md px-6">
-                        <div className="relative w-48 h-1 bg-white/20 rounded-full mx-auto mb-4 overflow-hidden">
-                          <div 
-                            className="absolute left-0 top-0 h-full bg-secondary rounded-full transition-all duration-300"
-                            style={{ width: `${videoProgress}%` }}
-                          />
-                        </div>
+                  {!videoLoaded && index === 0 && (
+                    <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                      <div className="text-center">
                         <div className="w-12 h-12 border-3 border-white/30 border-t-secondary rounded-full animate-spin mx-auto mb-3" />
-                        <p className="text-white/80 text-sm">
-                          {isBuffering ? "Buffering..." : `Loading video... ${Math.round(videoProgress)}%`}
-                        </p>
+                        <p className="text-white/70 text-sm">Loading video...</p>
                       </div>
                     </div>
                   )}
@@ -293,7 +256,7 @@ const HeroCarousel = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
               
               {/* Text Content */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none px-4 bottom-80 xl:top-70 xl:items-start xl:justify-center xl:left-12">
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pointer-events-none px-4 bottom-80 xl:top-70 xl:items-start xl:justify-center xl:left-12 ">
                 <motion.div
                   key={`title-${currentIndex}`}
                   initial={{ opacity: 0, y: 20 }}
@@ -331,7 +294,7 @@ const HeroCarousel = () => {
       <div className="swiper-button-next !cursor-pointer"></div>
 
       {/* Custom Slide Indicators */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-50 left-1/2 transform -translate-x-1/2 z-20 flex gap-3">
         {slides.map((slide, index) => (
           <button
             key={index}
@@ -352,11 +315,28 @@ const HeroCarousel = () => {
       </div>
 
       {/* Slide Counter */}
-      <div className="absolute bottom-8 left-8 z-20 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full hidden sm:block">
+      <div className="absolute bottom-8 left-8 z-20 bg-black/50 backdrop-blur-md px-4 py-2 rounded-full">
         <span className="text-white text-sm">
           {String(currentIndex + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
         </span>
       </div>
+
+      {/* Media Type Indicator */}
+      {/* <div className="absolute top-8 left-8 z-20 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full">
+        {slides[currentIndex]?.type === "video" ? (
+          <div className="flex items-center gap-2">
+            <Film size={14} className="text-red-500" />
+            <span className="text-white text-xs">
+              Video Tour {!isPlaying && "(Paused)"}
+            </span>
+          </div>
+        ) : (
+          <div className="flex items-center gap-2">
+            <ImageIcon size={14} className="text-secondary" />
+            <span className="text-white text-xs">Image Gallery</span>
+          </div>
+        )}
+      </div> */}
 
       {/* Video Controls - Only for video slide */}
       {slides[currentIndex]?.type === "video" && (
