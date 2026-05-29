@@ -287,24 +287,24 @@ export default function Footer() {
 
       {/* Map Section - Fixed Google Maps Embed */}
       <div className="border-t border-white/10">
-      <div className="container-custom py-6">
-        <h4 className="text-sm font-semibold mb-3 font-sans">
-          {locale === "en" ? "Our Location" : "আমাদের অবস্থান"}
-        </h4>
-        <div className="rounded-xl overflow-hidden h-64 w-full">
-          <iframe
-            title="Terrabuild Corporation Location Map"
-            src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=South+Banasree+Dhaka+Bangladesh"
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="strict-origin-when-cross-origin"
-          />
+        <div className="container-custom py-6">
+          <h4 className="text-sm font-semibold mb-3 font-sans">
+            {locale === "en" ? "Our Location" : "আমাদের অবস্থান"}
+          </h4>
+          <div className="rounded-xl overflow-hidden h-64 w-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902221432274!2d90.424247!3d23.747736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8c2e5f5e5e5%3A0x5e5e5e5e5e5e5e5e!2sSouth%20Banasree%2C%20Dhaka%2C%20Bangladesh!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Terrabuild Corporation Location Map"
+            />
+          </div>
         </div>
       </div>
-    </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10 py-6">
