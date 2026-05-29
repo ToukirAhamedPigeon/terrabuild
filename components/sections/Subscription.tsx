@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
-import emailjs from "emailjs-com";
+// import emailjs from "@emailjs/browser";
 import { useLanguage } from "@/context/LanguageContext";
 
 const Subscription = () => {
@@ -17,12 +17,12 @@ const Subscription = () => {
     setIsLoading(true);
 
     try {
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
-        { email, subject: "Newsletter Subscription", message: "New subscriber" },
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
-      );
+      // await emailjs.send(
+      //   process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+      //   process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+      //   { email, subject: "Newsletter Subscription", message: "New subscriber" },
+      //   process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
+      // );
       toast.custom(() => (
         <div className="bg-green-500 text-white px-4 py-3 rounded-lg shadow-lg flex items-center gap-2">
           <CheckCircle size={20} />
