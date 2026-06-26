@@ -69,7 +69,7 @@ export default function Footer() {
       //     from_email: formData.email,
       //     phone: formData.phone,
       //     message: formData.message,
-      //     to_email: "info@terrabuildbd.com",
+      //     to_email: "terrabuildbd@gmail.com",
       //   },
       //   process.env.NEXT_PUBLIC_EMAILJS_USER_ID!
       // );
@@ -191,13 +191,13 @@ export default function Footer() {
               <div className="flex items-center gap-3 text-gray-400 text-sm">
                 <Phone className="w-4 h-4 text-secondary flex-shrink-0" />
                 <a href="tel:+8801234567890" className="hover:text-secondary transition-colors">
-                  +880 1234 567890
+                  +880 1329 007766
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-400 text-sm">
                 <Mail className="w-4 h-4 text-secondary flex-shrink-0" />
-                <a href="mailto:info@terrabuildbd.com" className="hover:text-secondary transition-colors">
-                  info@terrabuildbd.com
+                <a href="mailto:terrabuildbd@gmail.com" className="hover:text-secondary transition-colors">
+                  terrabuildbd@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3 text-gray-400 text-sm">

@@ -43,8 +43,8 @@ const ContactSection = () => {
 
   const contactInfo = [
     { icon: MapPin, label: "Address", value: "South Banasree, Dhaka, Bangladesh" },
-    { icon: Phone, label: "Phone", value: "+880 1234 567890" },
-    { icon: Mail, label: "Email", value: "info@terrabuild.com" },
+    { icon: Phone, label: "Phone", value: "+880 1329 007766" },
+    { icon: Mail, label: "Email", value: "terrabuildbd@gmail.com" },
     { icon: Clock, label: "Hours", value: "Sun-Thu: 9AM - 6PM" },
   ];
 
@@ -145,7 +145,7 @@ const ContactSection = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-dark-4 bg-white dark:bg-dark-3 focus:outline-none focus:ring-2 focus:ring-secondary"
-                    placeholder="+880 1234 567890"
+                    placeholder="+880 1329 007766"
                   />
                 </div>
                 <div>

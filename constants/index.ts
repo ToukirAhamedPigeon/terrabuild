@@ -10,8 +10,8 @@ export const APP_CONFIG = {
   tagline: "Your Trusted Hands in Real Estate",
   description: "Premium real estate solutions in Bangladesh",
   version: "1.0.0",
-  email: "info@terrabuild.com",
-  phone: "+880 1234 567890",
+  email: "terrabuildbd@gmail.com",
+  phone: "+880 1329 007766",
   address: "South Banasree, Dhaka, Bangladesh",
 };
 

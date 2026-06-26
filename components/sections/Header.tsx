@@ -107,13 +107,13 @@ const Header = () => {
               <div className="flex items-center gap-2 hover:text-secondary transition-colors cursor-pointer">
                 <Phone size={14} className="text-secondary" />
                 <span className={theme === "dark" || !isScrolled ? "text-white" : "text-gray-900"}>
-                  +880 1234 567890
+                  +880 1329 007766
                 </span>
               </div>
               <div className="flex items-center gap-2 hover:text-secondary transition-colors cursor-pointer">
                 <Mail size={14} className="text-secondary" />
                 <span className={theme === "dark" || !isScrolled ? "text-white" : "text-gray-900"}>
-                  info@terrabuild.com
+                  terrabuildbd@gmail.com
                 </span>
               </div>
             </div>
@@ -263,11 +263,11 @@ const Header = () => {
                 <div className="flex flex-col gap-4 pt-6 mt-4 border-t border-gray-200/50 dark:border-gray-800/50">
                   <div className="flex items-center gap-3 cursor-pointer hover:text-secondary transition-colors">
                     <Phone size={18} className="text-secondary flex-shrink-0" />
-                    <span className="text-gray-900 dark:text-white">+880 1234 567890</span>
+                    <span className="text-gray-900 dark:text-white">+880 1329 007766</span>
                   </div>
                   <div className="flex items-center gap-3 cursor-pointer hover:text-secondary transition-colors">
                     <Mail size={18} className="text-secondary flex-shrink-0" />
-                    <span className="text-gray-900 dark:text-white">info@terrabuild.com</span>
+                    <span className="text-gray-900 dark:text-white">terrabuildbd@gmail.com</span>
                   </div>
                   <div className="flex items-center justify-between pt-4">
                     <div className="flex gap-4">
